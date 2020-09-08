@@ -13,6 +13,7 @@
 		7D6BF75B2506D24D00C824D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D6BF7592506D24D00C824D7 /* Main.storyboard */; };
 		7D6BF75D2506D25000C824D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D6BF75C2506D25000C824D7 /* Assets.xcassets */; };
 		7D6BF7602506D25000C824D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D6BF75E2506D25000C824D7 /* LaunchScreen.storyboard */; };
+		7D6BF76A25071A9600C824D7 /* myPinningCert.cer in Resources */ = {isa = PBXBuildFile; fileRef = 7D6BF76925071A9600C824D7 /* myPinningCert.cer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7D6BF75C2506D25000C824D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D6BF75F2506D25000C824D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D6BF7612506D25000C824D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D6BF76925071A9600C824D7 /* myPinningCert.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = myPinningCert.cer; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		7D6BF7522506D24D00C824D7 /* PinningPOC */ = {
 			isa = PBXGroup;
 			children = (
+				7D6BF76925071A9600C824D7 /* myPinningCert.cer */,
 				7D6BF7532506D24D00C824D7 /* AppDelegate.swift */,
 				7D6BF7552506D24D00C824D7 /* SceneDelegate.swift */,
 				7D6BF7572506D24D00C824D7 /* ViewController.swift */,
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D6BF76A25071A9600C824D7 /* myPinningCert.cer in Resources */,
 				7D6BF7602506D25000C824D7 /* LaunchScreen.storyboard in Resources */,
 				7D6BF75D2506D25000C824D7 /* Assets.xcassets in Resources */,
 				7D6BF75B2506D24D00C824D7 /* Main.storyboard in Resources */,
