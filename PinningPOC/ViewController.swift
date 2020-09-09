@@ -6,25 +6,31 @@
 //  Copyright © 2020 Jamie Chu. All rights reserved.
 //
 
+// MARK: - Attribution: - https://medium.com/better-programming/how-to-implement-ssl-pinning-in-swift-7c4e8f6ee821
+
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        print("-=- vdl")
-        URLSession.shared.dataTask(with: .init(url: URL(string: "http://pokeapi.co/api/v2/pokemon/ditto")!)) { (data, respone, error) in
-            print("-=-")
-        }.resume()
-    }
+final class ViewController: UIViewController {
 
     
-    private func getCertificates() -> [SecCertificate] {
-        let url = Bundle.main.url(forResource: "google", withExtension: "cer")
-        return []
+    private let networkManager = NetworkManager(
+        options: PinningPreferencesImpl(pinningOption: .publicKey, policy: SecPolicyCreateBasicX509())
+    )
+        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        networkManager.fetchRandomPokemon { _ in }
     }
 
 }
 
+
 //openssl s_client -connect <url>:443 </dev/null | openssl x509 -outform DER -out <filename>.der
+//openssl s_client -connect sni.cloudflaressl.com:443 </dev/null | openssl x509 -outform DER -out secondPoke.der
+//openssl s_client -connect google.com:443 </dev/null | openssl x509 -outform DER -out myPinningCert.cer
+
+
+//openssl s_client -connect sni.cloudflaressl.com:443 </dev/null | openssl x509 -outform DER -out myPoke1.cer
+
+//sni.cloudflaressl.com

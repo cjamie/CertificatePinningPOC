@@ -14,6 +14,9 @@
 		7D6BF75D2506D25000C824D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D6BF75C2506D25000C824D7 /* Assets.xcassets */; };
 		7D6BF7602506D25000C824D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D6BF75E2506D25000C824D7 /* LaunchScreen.storyboard */; };
 		7D6BF76A25071A9600C824D7 /* myPinningCert.cer in Resources */ = {isa = PBXBuildFile; fileRef = 7D6BF76925071A9600C824D7 /* myPinningCert.cer */; };
+		7D6BF76C2507256000C824D7 /* CloudflareIncECCCA-3.crt in Resources */ = {isa = PBXBuildFile; fileRef = 7D6BF76B2507256000C824D7 /* CloudflareIncECCCA-3.crt */; };
+		7D6BF77025072A4C00C824D7 /* sni.cloudflaressl.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = 7D6BF76F25072A4C00C824D7 /* sni.cloudflaressl.com.cer */; };
+		7D6BF7742508731900C824D7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6BF7732508731800C824D7 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		7D6BF75F2506D25000C824D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D6BF7612506D25000C824D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D6BF76925071A9600C824D7 /* myPinningCert.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = myPinningCert.cer; sourceTree = SOURCE_ROOT; };
+		7D6BF76B2507256000C824D7 /* CloudflareIncECCCA-3.crt */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CloudflareIncECCCA-3.crt"; sourceTree = "<group>"; };
+		7D6BF76F25072A4C00C824D7 /* sni.cloudflaressl.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = sni.cloudflaressl.com.cer; sourceTree = "<group>"; };
+		7D6BF7732508731800C824D7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				7D6BF76925071A9600C824D7 /* myPinningCert.cer */,
+				7D6BF76F25072A4C00C824D7 /* sni.cloudflaressl.com.cer */,
 				7D6BF7532506D24D00C824D7 /* AppDelegate.swift */,
+				7D6BF7732508731800C824D7 /* NetworkManager.swift */,
 				7D6BF7552506D24D00C824D7 /* SceneDelegate.swift */,
 				7D6BF7572506D24D00C824D7 /* ViewController.swift */,
+				7D6BF76B2507256000C824D7 /* CloudflareIncECCCA-3.crt */,
 				7D6BF7592506D24D00C824D7 /* Main.storyboard */,
 				7D6BF75C2506D25000C824D7 /* Assets.xcassets */,
 				7D6BF75E2506D25000C824D7 /* LaunchScreen.storyboard */,
@@ -131,7 +140,9 @@
 				7D6BF76A25071A9600C824D7 /* myPinningCert.cer in Resources */,
 				7D6BF7602506D25000C824D7 /* LaunchScreen.storyboard in Resources */,
 				7D6BF75D2506D25000C824D7 /* Assets.xcassets in Resources */,
+				7D6BF77025072A4C00C824D7 /* sni.cloudflaressl.com.cer in Resources */,
 				7D6BF75B2506D24D00C824D7 /* Main.storyboard in Resources */,
+				7D6BF76C2507256000C824D7 /* CloudflareIncECCCA-3.crt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D6BF7742508731900C824D7 /* NetworkManager.swift in Sources */,
 				7D6BF7582506D24D00C824D7 /* ViewController.swift in Sources */,
 				7D6BF7542506D24D00C824D7 /* AppDelegate.swift in Sources */,
 				7D6BF7562506D24D00C824D7 /* SceneDelegate.swift in Sources */,
