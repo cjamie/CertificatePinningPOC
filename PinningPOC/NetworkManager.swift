@@ -84,12 +84,11 @@ final class PinningSessionDelegate: NSObject, URLSessionDelegate {
         // this method shall always call completion
         defer { completionHandler(disposition, credential) }
         
-        guard challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust, let serverTrust = challenge.protectionSpace.serverTrust else {
-            print("-=- pinning failed")
-            return
-        }
-        
-        guard self.validate(trust: serverTrust, with: policy), let certificateProvidedByServer = SecTrustGetCertificateAtIndex(serverTrust, 0) else {
+        guard
+            challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust,
+            let serverTrust = challenge.protectionSpace.serverTrust,
+            validate(trust: serverTrust, with: policy),
+            let certificateProvidedByServer = SecTrustGetCertificateAtIndex(serverTrust, 0) else {
             print("-=- pinning failed")
             return
         }
