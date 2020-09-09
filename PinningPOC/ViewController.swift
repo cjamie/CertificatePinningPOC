@@ -25,6 +25,7 @@ final class ViewController: UIViewController {
 
 }
 
+// NOTE: - These are sample terminal commands you can run to download your certs. Alternatively, you can download these directly from chrome. Make sure to embed it to your Xcode project afterwards. 
 
 //openssl s_client -connect <url>:443 </dev/null | openssl x509 -outform DER -out <filename>.der
 //openssl s_client -connect sni.cloudflaressl.com:443 </dev/null | openssl x509 -outform DER -out secondPoke.der
